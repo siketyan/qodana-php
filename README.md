@@ -1,15 +1,10 @@
 # Customized Qodana-PHP
 
-This is an customized qodana-php docker image to include the Symfony Plugin and PHP Inspections EA Extended which adds a lot of inspections.
+This is an customized qodana-php docker image.
 
 ## Changes to original Image
 
-- Added PHPStan plugin to understand phpstan types
-- Added Psalm plugin to understand psalm types
-- Added JavaScript support together with PHP support
-- Added Symfony Plugin
 - Added PHP Annotations Plugin
-- Added PHP Inspections EA Extended
 - Pre-enabled Symfony Plugin to pass container warnings and other
 - Pre-enabled Composer sync to pass namespace path mapping
 - Installed all PHP extensions to composer install does not fail
@@ -20,13 +15,13 @@ This is an customized qodana-php docker image to include the Symfony Plugin and 
 # .qodana.yaml
 version: "1.0"
 # Following PHP versions are available: 8.0, 8.1 and 8.2
-linter: ghcr.io/shyim/qodana-php:8.1
+linter: ghcr.io/siketyan/qodana-php:8.1
 ```
 
 ## Run it locally
 
 ```bash
-docker run --rm -it -p8080:8080 -v $(pwd):/data/project ghcr.io/shyim/qodana-php:8.1 --show-report
+docker run --rm -it -p8080:8080 -v $(pwd):/data/project ghcr.io/siketyan/qodana-php:8.1 --show-report
 ```
 
 ## Tips
